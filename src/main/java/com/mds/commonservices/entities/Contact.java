@@ -1,5 +1,6 @@
 package com.mds.commonservices.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 //JPA Annotation
@@ -9,7 +10,8 @@ public class Contact {
 	private String home_contact;
 	
 	private String office_contact;
-	
+
+	@Column(nullable = false)
 	private String mobile_contact;
 
 	public String getHome_contact() {

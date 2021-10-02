@@ -86,7 +86,7 @@ public class Data {
     }
     public static Contact getDummyPatientContact(){
         Contact patContact = new Contact();
-        patContact.setHome_contact("8510964757");
+        patContact.setMobile_contact("8510964757");
         return patContact;
     }
     public static Patient getDummyPatient(){
