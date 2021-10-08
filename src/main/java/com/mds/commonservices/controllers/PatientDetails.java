@@ -16,4 +16,8 @@ public class PatientDetails {
     public List<Patient> getPatients(){
         return patientService.getPatients();
     }
+    @GetMapping("/delete")
+    public List<Patient> deletePatient(){
+    	return patientService.deletePatient();
+    }
 }

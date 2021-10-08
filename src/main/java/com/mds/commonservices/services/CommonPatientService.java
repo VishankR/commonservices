@@ -17,4 +17,8 @@ public class CommonPatientService {
     public List<Patient> getPatients(){
         return customPatRepo.findPatientByFirstNameAndLastName("Vishank", "Rajput");
     }
+    public List<Patient> deletePatient(){
+    	jpaPatientRepo.deleteById(7);
+    	return getPatients();
+    }
 }

@@ -23,7 +23,7 @@ private EntityManager entityManager;
         Query query = entityManager.createQuery("select p from Patient as p where p.first_name=:firstName and p.last_name=:lastName");
         query.setParameter("firstName", firstName);
         query.setParameter("lastName", lastName);
-        List generalizedPatientList = query.getResultList();
+        List<Object> generalizedPatientList = query.getResultList();
         return (List<Patient>) generalizedPatientList.stream()
                 .filter(temp -> temp instanceof Patient)
                 .map(temp -> (Patient)temp).collect(Collectors.toList());

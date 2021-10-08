@@ -31,11 +31,11 @@ public class Prescription {
 	
 	private int refills;
 	 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "patient_id", nullable = false)
 	private Patient patient;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "pres")
+	@OneToMany(cascade = CascadeType.REMOVE, mappedBy = "pres")
 	private List<PrescriptionFill> presFill;
 
 	public List<PrescriptionFill> getPresFill() {

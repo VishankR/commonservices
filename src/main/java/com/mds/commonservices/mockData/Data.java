@@ -99,6 +99,7 @@ public class Data {
         pat.setLast_name("Rajput");
         pat.setGender("Male");
         pat.setContact(getDummyPatientContact());
+        pat.setMail("vishankkumar@gmail.com");
         pat.setValid(true);
         return pat;
     }

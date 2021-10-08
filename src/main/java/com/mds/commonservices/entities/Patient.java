@@ -71,7 +71,7 @@ public class Patient {
 
 	//If I use "mappedBy" attribute in owning entity then we can suppress one additional update query which is triggered if
 	//I use "mappedBy" attribute in non-owning entity in a Bi-Directional relationship.
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "patient")
+	@OneToMany(cascade = CascadeType.REMOVE, mappedBy = "patient")
 	private List<Prescription> pres;
 
 	public List<Prescription> getPres() {

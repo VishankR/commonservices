@@ -35,7 +35,7 @@ public class PrescriptionFill {
 	@Temporal(TemporalType.DATE)
 	private Date pickup_date;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name = "prescription_id", nullable = false)
 	private Prescription pres;
 	
